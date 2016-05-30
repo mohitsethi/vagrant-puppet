@@ -3,7 +3,7 @@
 
 Vagrant.configure(2) do |config|
 
-  config.vm.box = "opscode-ubuntu-1404"
+  config.vm.box = "opscode-ubuntu-14.04"
    # if you are behing corporate firewall
    # step1: install vagrant-proxyconf plugin `$ vagrant plugin install vagrant-proxyconf
    # step2: uncomment below configuration
@@ -12,6 +12,9 @@ Vagrant.configure(2) do |config|
    #  config.proxy.https    = "http://172.21.4.10:3128/"
    #  config.proxy.no_proxy = "localhost,127.0.0.1"
    # end
+
+
+  config.vm.provision :shell, :inline => "sudo apt-get update -y"
 
   config.vm.provision :shell, :inline => "sudo apt-get install git vim ntp -y"
 
@@ -24,8 +27,8 @@ Vagrant.configure(2) do |config|
 
   # config.vm.provision :shell, :inline => "sudo apt-get update -y >/dev/null 2>&1"
 
-  config.vm.provider :virtualbox do |vb|
-    vb.customize ["modifyvm", :id, "--memory", 3072] 
+   config.vm.provider :virtualbox do |vb|
+    vb.customize ["modifyvm", :id, "--memory", 2048] 
     # vb.gui = true
    end
 
