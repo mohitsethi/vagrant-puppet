@@ -33,12 +33,15 @@ Vagrant.configure(2) do |config|
    end
 
    config.vm.define :puppetmaster do |vm_config|
+
+    vm_config.vm.network "private_network", ip: "192.168.50.4"
     vm_config.vm.hostname = "puppetmaster.arris.com"
     vm_config.vm.network "forwarded_port", guest: 8140, host: 8140
 
    end
 
    config.vm.define :puppet_agent do |vm_config|
+    vm_config.vm.network "private_network", ip: "192.168.50.5"
     vm_config.vm.hostname = "puppet-agent.arris.com"
    end
 

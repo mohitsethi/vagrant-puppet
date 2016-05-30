@@ -53,7 +53,7 @@ Populate the file with the following:
     basemodulepath = $confdir/modules:/opt/puppet/share/puppet/modules
 
   [main]
-    dns_alt_names = puppet,puppetmaster,puppetmaster.mohitseti.com
+    dns_alt_names = puppet,puppetmaster,puppetmaster.arris.com
 
 -------------------------------------------------------------------------------
     
