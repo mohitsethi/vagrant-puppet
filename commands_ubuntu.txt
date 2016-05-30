@@ -13,7 +13,7 @@ On the puppetmaster:
 
 BASE INSTALLATION
 # Install development tools
-$ sudo apt-get install build-essentials git ntp vim 
+$ sudo apt-get install build-essential git ntp vim 
 $ sudo service ntpd start
 $ sudo chkconfig ntpd on
 
