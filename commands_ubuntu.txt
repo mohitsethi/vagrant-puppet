@@ -14,8 +14,8 @@ On the puppetmaster:
 BASE INSTALLATION
 # Install development tools
 $ sudo apt-get install build-essential git ntp vim 
-$ sudo service ntpd start
-$ sudo chkconfig ntpd on
+$ sudo service ntp start
+$ sudo chkconfig ntp on
 
 -------------------------------------------------------------------------------
  PUPPET MASTER INSTALL
