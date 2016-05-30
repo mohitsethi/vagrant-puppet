@@ -125,3 +125,25 @@ CONFIGURE AGENT TO TALK to PUPPET-MASTER
 
 [agent]
 server = puppetmaster.arris.com
+
+$ vim /etc/default/puppet
+  change START=no to START=yes
+
+$ sudo service puppet restart
+
+# Invoke agent 
+  $ sudo puppet agent --test
+
+
+
+
+
+
+
+
+
+
+
+
+
+
