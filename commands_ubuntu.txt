@@ -135,7 +135,39 @@ $ sudo service puppet restart
   $ sudo puppet agent --test
 
 
+-------------------------------------------------------------------------------
 
+Day 2 
+
+
+INSTALLATION of Puppet Explorer
+
+
+# Repository: https://github.com/spotify/puppetexplorer
+
+# On Puppetmaster
+  # Install PuppetDB
+  $ sudo apt-get install puppetdb
+  # Documentation: https://docs.puppet.com/puppetdb/4.1/install_from_packages.html
+
+  $ git clone -v https://github.com/spotify/puppetexplorer
+  $ cd puppetexplorer
+  $  vim Gruntfile.js
+    add following content: 
+
+  $ sudo apt-get install nodejs-legacy
+  $ sudo apt-get install npm -y
+  $ 
+
+
+# DEFAULT NODE
+`
+node default { }
+
+node 'lamp-1' {
+
+}
+`
 
 
 
