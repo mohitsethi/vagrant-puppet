@@ -1,0 +1,18 @@
+CREATING MODULES
+
+$ cd /etc/puppet/environments/production/modules/
+$ sudo puppet module generate mohitsethi-mediawiki --environment production
+
+
+
+DOWNLOADING MODULES FROM THE PUPPET FORGE
+
+$ sudo puppet module install puppetlabs-apache --modulepath etc/puppet/environments/production/modules
+
+
+$ sudo puppet module install puppetlabs-vcsrepo --modulepath /etc/puppet/environments/production/modules
+
+
+$ sudo puppet module install puppetlabs-mysql --modulepath /etc/puppet/environments/production/modules
+
+$ sudo puppet module install puppetlabs-firewall --modulepath /etc/puppet/environments/production/modules

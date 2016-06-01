@@ -1,0 +1,20 @@
+CREATING A GIT REPOSITORY
+
+On puppetmaster:
+$ sudo git config --global user.name "Mohit Sethi"
+$ sudo git config --global user.email "mohit@sethis.in"
+$ cd /etc/puppet/environments/production
+$ sudo git init
+$ sudo git add .
+$ sudo git commit -m "Initial commit"
+
+
+RECOVERING FROM COMMITTED MISTAKES
+
+$ sudo git log
+$ sudo git revert --no-edit [bad commit]
+
+
+RECOVERING FROM UNCOMMITTED MISTAKES
+$ sudo git reset HEAD --hard
+

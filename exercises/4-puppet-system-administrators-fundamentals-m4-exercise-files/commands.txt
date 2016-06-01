@@ -1,0 +1,17 @@
+ADDING SYNTAX HIGHLIGHTING TO NANO
+
+On the puppetmaster:
+$ cd ~
+$ git clone https://github.com/mohitsethi/puppet-nano
+$ sudo cp puppet-nano/puppet.nanorc /root/.nanorc
+
+
+RESTORING FROM THE CLIENT FILEBUCKET
+
+On the node:
+$ sudo puppet filebucket -l --bucket /var/lib/puppet/clientbucket restore /info.txt 54246425fd60dcdae9186794d4b98c45
+
+Display the file contents:
+$ sudo puppet filebucket -l --bucket /var/lib/puppet/clientbucket get 54246425fd60dcdae9186794d4b98c45
+
+
