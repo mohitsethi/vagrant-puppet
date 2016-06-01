@@ -37,6 +37,7 @@ Vagrant.configure(2) do |config|
     vm_config.vm.network "private_network", ip: "192.168.50.4"
     vm_config.vm.hostname = "puppetmaster.arris.com"
     vm_config.vm.network "forwarded_port", guest: 8140, host: 8140
+    vm_config.vm.network "forwarded_port", guest: 8000, host: 8000
 
    end
 
